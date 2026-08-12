@@ -1,0 +1,8 @@
+{
+  "name": "chess-game",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node tests/chess.test.js"
+  }
+}

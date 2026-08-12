@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Chess Game</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand-card">
+        <p class="eyebrow">Browser Chess</p>
+        <h1>Online Chess Game</h1>
+        <p class="intro">Two players, local browser play, full chess rules, drag and drop, and move history.</p>
+      </div>
+
+      <section class="status-card">
+        <div class="status-row">
+          <span>Turn</span>
+          <strong id="turn-indicator">White</strong>
+        </div>
+        <div class="status-row">
+          <span>State</span>
+          <strong id="game-state">In progress</strong>
+        </div>
+        <div class="status-row">
+          <span>Last move</span>
+          <strong id="last-move">None</strong>
+        </div>
+        <button id="restart-button" class="primary-button" type="button">Restart Game</button>
+      </section>
+
+      <section class="capture-card">
+        <h2>Captured by White</h2>
+        <div id="white-captures" class="capture-row"></div>
+        <h2>Captured by Black</h2>
+        <div id="black-captures" class="capture-row"></div>
+      </section>
+    </aside>
+
+    <main class="board-panel">
+      <div class="board-header">
+        <div>
+          <p class="eyebrow">Interactive Board</p>
+          <h2>Drag pieces or click to move</h2>
+        </div>
+        <div class="legend">
+          <span><i class="dot legal"></i> Legal move</span>
+          <span><i class="dot selected"></i> Selected</span>
+          <span><i class="dot check"></i> King in check</span>
+        </div>
+      </div>
+
+      <div class="board-wrapper">
+        <div id="chessboard" class="chessboard" aria-label="Chess board"></div>
+      </div>
+    </main>
+
+    <aside class="history-panel">
+      <div class="history-card">
+        <p class="eyebrow">Match Record</p>
+        <h2>Move History</h2>
+        <ol id="move-history" class="move-history"></ol>
+      </div>
+    </aside>
+  </div>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
